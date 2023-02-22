@@ -1,26 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Route, Routes } from 'react-router-dom';
+import AppComponent from './MainComponents/AppComponent';
+import { ThemeProvider } from "@mui/material";
+import { appTheme } from './theme/theme';
+
+// const registerServiceWorker = async () => {
+//   if ('serviceWorker' in navigator) {
+//     // Весь код регистрации у нас асинхронный.
+//     navigator.serviceWorker.register('./sw.js')
+//       .then(() => navigator.serviceWorker.ready.then((worker) => {
+//         worker.sync.register('syncdata');
+//       }))
+//       .catch((err) => console.log(err));
+// }
+// };
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <ThemeProvider theme={appTheme}>
+      <Routes>
+        <Route path='/' element={<AppComponent/>} />
+        {/* <Route path='/next' element={<redux name={"Dima"} />} /> */}
+      </Routes>
+    </ThemeProvider>
+  )
 }
 
 export default App;
+// registerServiceWorker();
