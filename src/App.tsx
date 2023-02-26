@@ -16,14 +16,23 @@ import { appTheme } from './theme/theme';
 
 
 function App() {
-  return (
-    <ThemeProvider theme={appTheme}>
+  enum Pages {
+    Home = "/",
+    CharacterPage = "/:id",
+    AboutPage = "/about",
+    ContactPage = "/contact",
+  }
+  
+    return (
       <Routes>
-        <Route path='/' element={<AppComponent/>} />
-        {/* <Route path='/next' element={<redux name={"Dima"} />} /> */}
+        <Route path={Pages.Home} element={<AppComponent />}>
+          {/* <Route index element={<Homepage />} /> */}
+          {/* <Route path={Pages.CharacterPage} element={<SingleCharacter />} />
+          <Route path={Pages.AboutPage} element={<AboutPage />} />
+          <Route path={Pages.ContactPage} element={<ContactUsPage />} /> */}
+        </Route>
       </Routes>
-    </ThemeProvider>
-  )
+    );
 }
 
 export default App;
