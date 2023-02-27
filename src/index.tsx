@@ -1,19 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './styles.scss';
-// import './script.js';
 import App from './App';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import { Store } from './Stores/Store';
+import { Store } from './Redux/Store';
+import { CssBaseline, ThemeProvider } from "@mui/material";import ToggleColorMode from './demo';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <Provider store={Store}>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-    </Provider>
-  </React.StrictMode>
+
+  // <React.StrictMode>
+      <Provider store={Store}>
+        
+          <ToggleColorMode />
+      </Provider>
+  // </React.StrictMode>
 );

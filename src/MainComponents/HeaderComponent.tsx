@@ -5,9 +5,9 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 
-export const HeaderComponent=()=> {
+export const HeaderComponent = () => {
   return (
-    <Box sx={{ flexGrow: 1, pr:3,pl:3,pb: 3 }}>
+    <Box sx={{ borderRadius: '80px', flexGrow: 1, pr: 3, pl: 3, pb: 3 }}>
       <AppBar position="static">
         <Toolbar>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>

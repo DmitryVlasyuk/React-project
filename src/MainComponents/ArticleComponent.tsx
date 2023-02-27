@@ -1,11 +1,12 @@
-import { CharacterComponent} from "../Functions/RIMFunction"
+import { CharacterComponent} from "../Characters/RIMFunction"
 import Box from '@mui/material/Box';
+import { AllCharacters } from "../Characters/characters";
 export const ArticleComponent = () => {
     return (
-        <section className="article__wrapper" id="#article__wrapper">
-            <CharacterComponent/>
-            <CreateArticle content = {<div className="box"/>}/>
-        </section >
+        <Box className="article__wrapper">
+            <AllCharacters/>
+            {/* <CreateArticle content = {<div className="box"/>}/> */}
+        </Box >
     )
 }
 const CreateArticle = ({content}) => {

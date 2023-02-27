@@ -1,3 +1,4 @@
+import { Box } from "@mui/material";
 import { ArticleComponent } from "./ArticleComponent";
 import { AsideComponent } from "./AsideComponent";
 import { Footer } from "./FooterComponent";
@@ -6,9 +7,8 @@ import { NavigationComponent } from "./NavigationComponent";
 
 
 const AppComponent = () => {
-    return (<>
-
-        <div className="wrapper__content" >
+    return (
+        <Box className="wrapper__content" sx={{bgcolor: "background.default"}} >
             <NavigationComponent />
             <div className="content">
                 <HeaderComponent />
@@ -18,8 +18,7 @@ const AppComponent = () => {
                 </div>
                 <Footer title="Footer" description="this is footer" />
             </div>
-        </div>
-    </>
+        </Box>
     )
 }
 

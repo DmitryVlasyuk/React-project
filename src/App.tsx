@@ -1,7 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
 import AppComponent from './MainComponents/AppComponent';
-import { ThemeProvider } from "@mui/material";
-import { appTheme } from './theme/theme';
 
 // const registerServiceWorker = async () => {
 //   if ('serviceWorker' in navigator) {
@@ -13,7 +11,6 @@ import { appTheme } from './theme/theme';
 //       .catch((err) => console.log(err));
 // }
 // };
-
 
 function App() {
   enum Pages {
